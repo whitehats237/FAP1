@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Billetterie – Archeo Star</title>
+  <link rel="stylesheet" href="/FAP/style/billeterie.css">
+</head>
+<body>
+
+ <div class="header1">
+        <h1>ARCHEO STAR</h1>
+
+        <button><img src="/FAP/images/shop-svgrepo-com.svg" alt="" height="20px" width="20px"><a href="/FAP/html/Eshop.html">  E-shop</a></button>
+        <button><img src="/FAP/images/tickets-line-svgrepo-com.svg" alt="" height="20px" width="20px"><a href="billeterie.html">  billeterie</a></button>
+        
+    </div>
+  <div class="header2">
+    <nav>
+      <ul>
+               <li><a href="/FAP/html/index.html">Accueil</a></li>
+                <li><a href="/FAP/html/chantier.html">Expositions</a></li>
+                <li><a href="/FAP/html/contact.php">Contact</a></li>
+                <li><a href="/FAP/html/inscription.php">Inscription</a></li>
+                <li><a href="/FAP/html/Actualites.php">Actualites</a></li>
+      </ul>
+    </nav>
+  </div>
+
+
+  <div class="header3">
+    <h2>Réservez votre visite</h2>
+    <p>Choisissez une date et réservez votre billet dès maintenant.</p>
+  </div>
+
+  <form action="#" method="post">
+    <input type="text" name="nom" placeholder="Nom complet" required>
+    <input type="email" name="email" placeholder="Adresse e-mail" required>
+    <select name="visite" required>
+      <option value="">Choisissez une exposition</option>
+      <option value="pyramides">Pyramides de Gizeh</option>
+      <option value="pompei">Pompéi</option>
+      <option value="inca">Machu Picchu</option>
+    </select>
+    <input type="date" name="date" required>
+    <input type="number" name="places" placeholder="Nombre de billets" min="1" max="10" required>
+    <button type="submit">Réserver</button>
+  </form>
+
+ <footer>
+    <div class="footer-content">
+      <p>&copy; 2025 Archeo Star. Tous droits réservés.</p>
+      <div class="SOCIALS">
+        <a href="#"><img src="/FAP/images/facebook-svgrepo-com.svg" width="20" height="20"></a>
+        <a href="#"><img src="/FAP/images/twitter-svgrepo-com.svg"  width="20" height="20"></a>
+        <a href="#"><img src="/FAP/images/instagram-167-svgrepo-com.svg" width="20" height="20"></a>
+        <a href="#"><img src="/FAP/images/tiktok-svgrepo-com.svg" width="20" height="20"></a>
+      </div>
+      <ul>
+        <li><a href="#">Mentions légales</a></li>
+        <li><a href="#">Politique de confidentialité</a></li>
+        <li><a href="#">Conditions d'utilisation</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+  </footer>
+
+</body>
+</html>

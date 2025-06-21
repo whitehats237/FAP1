@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expositions – ARCHEO STAR</title>
+  <link rel="stylesheet" href="/FAP/style/chantiers.css">
+</head>
+<body>
+
+
+  <div class="header1">
+    <h1>ARCHEO STAR</h1>
+    <button><img src="/FAP/images/shop-svgrepo-com.svg" width="20" height="20"><a href="#"> E‑shop</a></button>
+    <button><img src="/FAP/images/tickets-line-svgrepo-com.svg" width="20" height="20"><a href="#"> Billetterie</a></button>
+  </div>
+
+
+  <div class="header2">
+    <nav>
+       <ul>
+                <li><a href="/FAP/html/index.html">Accueil</a></li>
+                <li><a href="/FAP/html/chantier.html">Expositions</a></li>
+                <li><a href="/FAP/html/contact.php">Contact</a></li>
+                <li><a href="/FAP/html/inscription.php">Inscription</a></li>
+                <li><a href="/FAP/html/Actualites.php">Actualites</a></li>
+        </ul>
+    </nav>
+  </div>
+
+  <div class="header3">
+    <video src="/FAP/images/imagesss/3591014-hd_1920_1080_30fps.mp4" class="background-video" autoplay muted loop></video>
+    <h2>Nos expositions : explorez le passé</h2>
+    <p>Plongez dans les grandes fouilles qui ont marqué l’histoire de l’archéologie.</p>
+  </div>
+
+
+  <section class="star">
+    <h2>Expositions en cours</h2>
+
+    <div class="sites-grid">
+      
+      <div class="site-card">
+        <img src="/FAP/images/photos sites/pexels-betul-aloglu-59970664-17115399.jpg" alt="Pyramides">
+        <div class="site-card-content">
+          <h3>Pyramides de Gizeh</h3>
+          <p>Une plongée dans les rites funéraires et l’ingénierie antique.</p>
+          <a href="#" class="site-btn">En savoir +</a>
+        </div>
+      </div>
+     
+      <div class="site-card">
+        <img src="/FAP/images/photos sites/pexels-bogdan-r-anton-338246-1005987.jpg" alt="Pompéi">
+        <div class="site-card-content">
+          <h3>Pompéi révélée</h3>
+          <p>Fresques, mosaïques et vie quotidienne sous le Vésuve.</p>
+          <a href="#" class="site-btn">En savoir +</a>
+        </div>
+      </div>
+      
+      <div class="site-card">
+        <img src="/FAP/images/photos sites/pexels-maria-regina-diaz-295717408-19725126.jpg" alt="Machu Picchu">
+        <div class="site-card-content">
+          <h3>Machu Picchu secret</h3>
+          <p>Patrimoine inca et innovations d’altitude.</p>
+          <a href="#" class="site-btn">En savoir +</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2025 Archeo Star. Tous droits réservés.</p>
+      <div class="SOCIALS">
+        <a href="#"><img src="/FAP/images/facebook-svgrepo-com.svg" width="20" height="20"></a>
+        <a href="#"><img src="/FAP/images/twitter-svgrepo-com.svg"  width="20" height="20"></a>
+        <a href="#"><img src="/FAP/images/instagram-167-svgrepo-com.svg" width="20" height="20"></a>
+        <a href="#"><img src="/FAP/images/tiktok-svgrepo-com.svg" width="20" height="20"></a>
+      </div>
+      <ul>
+        <li><a href="#">Mentions légales</a></li>
+        <li><a href="#">Politique de confidentialité</a></li>
+        <li><a href="#">Conditions d'utilisation</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+  </footer>
+
+ 
+
+
+<div id="modal" class="modal" style="display:none;">
+  <div class="modal-content">
+    <span class="close-btn" id="closeModal">&times;</span>
+    <h3 id="modal-title"></h3>
+    <p id="modal-desc"></p>
+  </div>
+</div>
+
+<script>
+  
+  const infos = [
+    {
+      title: "Pyramides de Gizeh",
+      desc: "Visitez le célèbre plateau de Gizeh, en Égypte, et découvrez les majestueuses pyramides de Khéops, Khéphren et Mykérinos, les dernières merveilles de l'Antiquité encore debout. Explorez les temples funéraires, les tombes des nobles et les énigmes de leur construction monumentale."
+    },
+    {
+      title: "Pompéi révélée",
+      desc: "Parcourez les rues figées de Pompéi, ville romaine ensevelie par l’éruption du Vésuve en 79 après J.-C. Admirez les vestiges intacts de maisons, thermes, théâtres et fresques, témoins poignants de la vie quotidienne dans l’Empire romain."
+    },
+    {
+      title: "Machu Picchu secret",
+      desc: "Explorez les ruines mystiques de Machu Picchu, ancienne cité inca perchée dans les Andes péruviennes. Découvrez ses terrasses agricoles, ses temples dédiés au Soleil et ses systèmes d’irrigation ingénieux dans un site classé au patrimoine mondial."
+    }
+  ];
+
+ 
+  document.querySelectorAll('.site-btn').forEach((btn, i) => {
+    btn.addEventListener('click', function(e) {
+      e.preventDefault();
+      document.getElementById('modal-title').textContent = infos[i].title;
+      document.getElementById('modal-desc').textContent = infos[i].desc;
+      document.getElementById('modal').style.display = 'block';
+    });
+  });
+
+  document.getElementById('closeModal').onclick = function() {
+    document.getElementById('modal').style.display = 'none';
+  };
+
+  window.onclick = function(event) {
+    if (event.target == document.getElementById('modal')) {
+      document.getElementById('modal').style.display = 'none';
+    }
+  };
+</script>
+
+
+</body>
+</html>
