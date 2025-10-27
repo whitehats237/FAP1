@@ -60,4 +60,4 @@ Pense à ajouter un fichier `LICENSE` si besoin.
 
 ---
 
-> Personnalise ce README selon la finalité précise du projet, ses modules et spécificités.
+
